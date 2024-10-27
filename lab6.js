@@ -43,7 +43,7 @@ function createMap() {
             var updateM2 = document.getElementById('mark2');
             var updateLoc2 = document.getElementById('loc2');
 
-            updateM2.innerHTML =  "Marker 1: Latitude: " + lat2 + ", Longitude: " + long2;
+            updateM2.innerHTML =  "Marker 2: Latitude: " + lat2 + ", Longitude: " + long2;
             updateLoc2.innerHTML = "Locality: " + loc2; 
         })
 

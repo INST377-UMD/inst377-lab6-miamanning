@@ -1,6 +1,6 @@
 
 function createMap() {
-    var map = L.map('map').setView([38.7946, -106.5348], 3);
+    var map = L.map('map').setView([38.7946, -106.5348], 4);
 
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -17,9 +17,11 @@ function createMap() {
     var long3 = getRandomInRange(-90, -100, 3);
 
     //Add map markers
-    
+    var marker1 = L.marker([lat1, long1]).addTo(map);
+    var marker2 = L.marker([lat2, long2]).addTo(map); 
+    var marker3 = L.marker([lat3, long3]).addTo(map);
 
-    //Make three fetch requests to API, passing three random coordinate pairs into query string
+    //Make three fetch requests to API, passing the three generated coordinate pairs into query string
     fetch(`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat1}&longitude=${long1}&localityLanguage=en`)
         .then((resp) => resp.json())
         .then((data) => {
